@@ -1,0 +1,3 @@
+[submodule "ckb-address-demo"]
+	path = ckb-address-demo
+	url = https://github.com/CipherWang/ckb-address-demo
