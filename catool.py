@@ -43,19 +43,19 @@ if __name__ == "__main__":
         print("encode standard address:\n\t./catool.py -e daa2193c6b95b9042b9227ffe349acaa45deff87 -n testnet")
         print("encode full address:\n\t./catool.py -f 0x709f3fda12f561cfacf92273c57a98fede188a3f1a59b1f888d113f9cce08649,0xb73961e46d9eb118d3de1d1e8f30b3af7bbf3160,data")
         print("encode short address:\n\t./catool.py -s 0,daa2193c6b95b9042b9227ffe349acaa45deff87")
-        exit(0)
+        sys.exit(0)
     # decode
     if args.address:
         network = args.address[:4]
         if network != "ckb1" and network != "ckt1":
             print("Address format error!")
-            exit(-1)
+            sys.exit(-1)
         network = "mainnet" if network == "ckb1" else "testnet"
         print("network:\t", network)
         script = decodeAddress(args.address, network)
         if script == False:
             print("Address format error!")
-            exit(-1)
+            sys.exit(-1)
         if script[0] == "short":
             print("format:\t\t", script[0])
             print("code index:\t", script[1])
@@ -82,4 +82,4 @@ if __name__ == "__main__":
     else:
         print("parameters error!")
         print(parser.parse_args(["-h"]))
-        exit(-1)
+        sys.exit(-1)
