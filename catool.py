@@ -39,10 +39,10 @@ if __name__ == "__main__":
     args = parser.parse_args()
     # show examples
     if args.example:
-        print("decode address:\n\t./cat.py -d ckt1qyqd4gse834etwgy9wfz0llrfxk253w7l7rsvjq0tr")
-        print("encode standard address:\n\t./cat.py -e daa2193c6b95b9042b9227ffe349acaa45deff87 -n testnet")
-        print("encode full address:\n\t./cat.py -f 0x709f3fda12f561cfacf92273c57a98fede188a3f1a59b1f888d113f9cce08649,0xb73961e46d9eb118d3de1d1e8f30b3af7bbf3160,data")
-        print("encode short address:\n\t./cat.py -s 0,daa2193c6b95b9042b9227ffe349acaa45deff87")
+        print("decode address:\n\t./catool.py -d ckt1qyqd4gse834etwgy9wfz0llrfxk253w7l7rsvjq0tr")
+        print("encode standard address:\n\t./catool.py -e daa2193c6b95b9042b9227ffe349acaa45deff87 -n testnet")
+        print("encode full address:\n\t./catool.py -f 0x709f3fda12f561cfacf92273c57a98fede188a3f1a59b1f888d113f9cce08649,0xb73961e46d9eb118d3de1d1e8f30b3af7bbf3160,data")
+        print("encode short address:\n\t./catool.py -s 0,daa2193c6b95b9042b9227ffe349acaa45deff87")
         exit(0)
     # decode
     if args.address:
